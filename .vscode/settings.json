@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "**/*.css": true,
+        "**/*.map": true,
+        "**/*.gitattributes": true
+    }
+}

@@ -1,0 +1,34 @@
+footer {
+  display: block;
+  height: 500px;
+  background: #2f244b;
+  margin-top: 20px;
+  position: relative;
+}
+
+footer .cols {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  padding-top: 70px;
+  margin: auto;
+}
+
+footer .cols ul {
+  text-align: center;
+}
+
+footer .cols ul li {
+  display: block;
+}
+
+footer .cols ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-family: arial;
+  padding: 10px;
+}
+/*# sourceMappingURL=footer.css.map */

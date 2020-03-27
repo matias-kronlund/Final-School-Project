@@ -1,0 +1,27 @@
+footer{
+    display: block;
+    height: 500px;
+    background: #2f244b;
+    margin-top: 20px;
+    position: relative;
+    .cols{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: 80%;
+        padding-top: 70px;
+        margin: auto;
+        ul{
+            text-align: center;
+            li{
+                display: block;
+                a{
+                    display: block;
+                    text-decoration: none;
+                    color: white;
+                    font-family: arial;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
