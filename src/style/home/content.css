@@ -1,5 +1,4 @@
 #content-container {
-  margin-top: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -7,6 +6,8 @@
   border-top: 1px solid black;
   grid-auto-rows: 100vh;
   grid-gap: 10px;
+  margin: 10%;
+  margin-top: 100vh;
 }
 
 #content-container div {
