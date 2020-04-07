@@ -86,12 +86,13 @@ nav #mklogo {
 }
 
 nav ul {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
   margin: auto;
   margin-top: 10px;
   display: block;
   width: 400px;
   padding-top: 4px;
-  background: black;
 }
 
 nav ul li {
@@ -107,7 +108,7 @@ nav ul li {
 }
 
 nav ul li:hover a {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 nav ul li:hover > span > span {
@@ -120,7 +121,7 @@ nav ul li a {
   transition: 200ms;
   outline: none;
   font-family: arial;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 30px;
   display: block;
   text-decoration: none;

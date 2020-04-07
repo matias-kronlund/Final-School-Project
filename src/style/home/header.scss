@@ -61,12 +61,13 @@ nav{
         position: static;
     }
     ul{
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
         margin:auto;
         margin-top: 10px;
         display: block;
         width: $navwidth;
         padding-top: 4px;
-        background: rgb(0, 0, 0);
         li{
             margin: 5px;
             position: relative;
@@ -78,7 +79,7 @@ nav{
             outline: none;
             &:hover{
                 a{
-                    font-size: 20px;
+                    font-size: 24px;
                 }
             }
             &:hover > span > span{
@@ -90,7 +91,7 @@ nav{
                 transition: 200ms;
                 outline: none;
                 font-family: arial;
-                font-size: 18px;
+                font-size: 20px;
                 line-height: 30px;
                 display: block;
                 text-decoration: none;
