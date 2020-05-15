@@ -33,6 +33,7 @@ window.onresize = resizeUpdate
 let scrollUpdate = () => {
   navbarUpdate();
   fadecontent();
+  imgMargin();
 }
 window.onscroll = scrollUpdate;
 
@@ -47,18 +48,21 @@ let navbarUpdate = () => {
 
 //Fades in the content
 let fadecontent = () => {
-  let contents = document.getElementsByClassName("fade");
+  let contents = document.getElementById("content-container").children;
   let show_amount = (scrollY/bannerHeight) + 0.7;
   show_amount = show_amount.toString().split(".")[0]
   for(let i = 1; i <= show_amount; i++){
     let target = i-1
+    
     try{
-      contents[target].classList.add("fade1")
+      if(contents[target].classList.contains("fade")){
+        contents[target].classList.add("fade-show")
+      }
     }catch{}
   }
   for(let i = show_amount; i < contents.length; i++){
     try{
-      contents[i].classList.remove("fade1")
+      contents[i].classList.remove("fade-show")
     }catch{}
   }
 }

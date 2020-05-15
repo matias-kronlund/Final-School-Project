@@ -1,35 +1,41 @@
+$sidebars: rgba(0, 0, 0, 0);
+$my_blue: #2f244b;
+$boxdelay1: 1s;
 #content-container{
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: 100vh;
-    margin: 10%;
     margin-top: 100vh;
     &>div{
-        background: red;
-        transition: 2s;
+        border-left: 1px solid $sidebars;
+        border-right: 1px solid $sidebars;
+        transition: left 2s;
+        transition: right 2s;
+        transition: opacity 2s;
         display: grid;
         grid-template-columns: 1fr 1.3fr;
         &>div{
             position: relative;
             .bar-text{
-                font-family: freight-display-pro;
                 position: absolute;
                 top: 50%;
                 width: 80%;
                 h1{
-                    font-family: freight-display-pro;
-                    font-weight: 600;
+                    font-family: source-code-pro, monospace;
+                    font-weight: 700;
                     font-style: normal;
                     font-size: 3.13vw !important;
                     -webkit-font-smoothing: antialiased !important;
-                    letter-spacing: .025em;
+                    line-height: 3.12vw;
+                    color: rgb(32, 32, 32);
                 }
                 p{
-                    font-family: proxima-nova;
+                    font-family: source-code-pro, monospace;
                     font-weight: 400;
                     font-style: normal;
                     font-size: 16px;
                     -webkit-font-smoothing: antialiased !important;
+                    color: rgb(68, 68, 68);
                 }
             }
             .img{
@@ -43,10 +49,11 @@
         
     }
     &>div:nth-child(odd){
+        margin-left: 10%;
+        margin-right: 10%;
         background: rgb(255, 255, 255);
     }
     .fade{
-        
         opacity: 0;
         .bar-text{
             left: 10px;
@@ -55,16 +62,189 @@
             right: 10px;
         }
     }
-    .fade1{
+    .fade-show{
         opacity: 1;
         .bar-text{
-            transition: 2s;
+            transition: left 2s;
             left: 25px;
         }
         .img{
-            transition: 2s;
+            transition: right 2s;
             right: 25px;
         }
+    }
+    .visable{
+        background: $my_blue;
+        display: block;
+        position: relative;
+        .tree-col{
+            margin-top: 5%;
+            position: absolute;
+            width: 80%;
+            margin-left: 50%;
+            left: -40%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            text-align: center;
+            grid-column-gap: 5%;
+            .header{
+                margin-top: 15vh;
+                grid-column: 1 / span 3;
+                h1{
+                    font-family: source-code-pro, monospace;
+                    font-weight: 700;
+                    font-style: normal;
+                    font-size: 3.13vw;
+                    color: white;
+                }
+            }
+            .trees{
+                margin-top: 10vh;
+                h2{
+                    font-family: source-code-pro, monospace;
+                    border-bottom: 1px solid rgb(255, 255, 255);
+                    display: inline;
+                    color: rgb(0, 0, 0);
+                }
+                p{
+                    font-family: source-code-pro, monospace;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-size: 18px;
+                    color: white;
+                }
+                a{
+                    padding: 10px;
+                    position: relative;
+                    display: block;
+                    width: 140px;
+                    margin: auto;
+                    color: rgb(255, 255, 255);
+                    text-decoration: none;
+                    font-family: source-code-pro, monospace;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-size: 18px;
+                    transition: 1s;
+                    transition-delay: 0s;
+                    margin-top: 20px;
+                    &>.lines{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        span{
+                            transition: 1s;
+                            background: rgb(202, 202, 202);
+                            opacity: 0;
+                            display: block;
+                            position: absolute;
+                        }
+                        //Top and bottom basics
+                        span:nth-child(1),span:nth-child(2),span:nth-child(3),span:nth-child(4){
+                            width: 0px;
+                            height: 2px;
+                        }
+                        span:nth-child(1){
+                            left: 50%;
+                            top: 0;
+                        }
+                        span:nth-child(2){
+                            right: 50%;
+                            top: 0;
+                        }
+                        span:nth-child(3){
+                            left: 50%;
+                            bottom: 0;
+                        }
+                        span:nth-child(4){
+                            right: 50%;
+                            bottom: 0;
+                        }
+                        span:nth-child(5),span:nth-child(6),span:nth-child(7),span:nth-child(8){
+                            height: 0px;
+                            width: 3px;
+                        }
+                        span:nth-child(5){
+                            top: 50%;
+                            left: 0;
+                        }
+                        span:nth-child(6){
+                            bottom: 50%;
+                            left: 0;
+                        }
+                        span:nth-child(7){
+                            top: 50%;
+                            right: 0;
+                        }
+                        span:nth-child(8){
+                            bottom: 50%;
+                            right: 0;
+                        }      
+                        &:hover{
+                            span{
+                                opacity: 1;
+                            }
+                            //Top and bottom
+                            span:nth-child(1),span:nth-child(2),span:nth-child(3),span:nth-child(4){
+                                width: 50%;
+                            }
+                            //Left and right
+                            span:nth-child(7),span:nth-child(8),span:nth-child(5),span:nth-child(6){
+                                height: 50%;
+                            }
+                        }
+                    }
+                    &:hover{
+                        transition-delay: 0.5s;
+                        background: rgb(255, 255, 255);
+                        color: $my_blue;
+                    }
+                }
+            }
+        }
+    }
+    .tree-imges{
+        grid-column: 1 / span 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 10vh 50vh;
+        grid-gap: 5%;
+        .t-img-title{
+            grid-column: 1 / span 3;
+            display: block;
+            margin-top: 30px;
+            text-align: center;
+            h1{
+                font-family: source-code-pro, monospace;
+                    font-weight: 700;
+                    font-style: normal;
+                    font-size: 3.13vw !important;
+                    -webkit-font-smoothing: antialiased !important;
+                    line-height: 3.12vw;
+                    color: rgb(32, 32, 32);
+            }
+            p{
+                font-family: source-code-pro, monospace;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 16px;
+                    -webkit-font-smoothing: antialiased !important;
+                    color: rgb(68, 68, 68);
+            }
+        }
+        .image-holder{
+            background-image: url("https://images.squarespace-cdn.com/content/v1/5300d507e4b0fa8137bdc65d/1563476526715-BV26O9OJ9LSZAJR6XF1H/ke17ZwdGBToddI8pDm48kB_9Hyc6xjdNdhdi3UWj6qlZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpyD-Ak5I19l0qI4MZK8U1l4iOM0TV4ucICoJJXBeakb3qRksXQHZ18XeA_ypUs9BuQ/Squarespace-coffee-Shop-Website-Example-02.jpg?format=500w");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            &:nth-child(3){
+                margin-top: 50px;
+            }
+        }
+        
+        
     }
     
 }
