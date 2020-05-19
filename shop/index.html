@@ -29,7 +29,7 @@
                     <ul class="options">
                         <li><input type="checkbox" name="" id="lang_java"><p>Java</p></li>
                         <li><input type="checkbox" name="" id="lang_python"><p>Python</p></li>
-                        <li><input type="checkbox" name="" id="lang_Php"><p>Php</p></li>
+                        <li><input type="checkbox" name="" id="lang_php"><p>Php</p></li>
                     </ul>
                 </li>
                 <li>
@@ -46,26 +46,19 @@
                 </li>
             </ul>
             
-            <button>Apply</button>
+            <button ng-click="apply()">Apply</button>
         </div>
         <div class="list">
-            <div><div>
-                <img src="../src/images/products/curses-01.jpg" alt="">
-                <p class="product_Name">Java Advanced</p>
-                <p class="product_Price">100.99€</p>
+            <div ng-repeat="item in products | myFormat:item"><div>
+                <img ng-src="../src/images/products/curses-{{item.img}}.jpg" alt="">
+                <p class="product_Name">{{item.name}}</p>
+                <p class="product_Price">{{item.price}}€</p>
             </div></div>
-            <div><div></div></div>
-            <div><div></div></div>
-            <div><div></div></div>
-            <div><div></div></div>
-            <div><div></div></div>
-            <div><div></div></div>
-            <div><div></div></div>
-            <div><div></div></div>
-            <div><div></div></div>
         </div>
+        {{langs}}
     </div>
     <script src="../src/scripts/scrolleffect.js"></script>
     <script src="../src/scripts/check.js"></script>
+    <script src="../src/scripts/shop_app.js"></script>
 </body>
 </html>
