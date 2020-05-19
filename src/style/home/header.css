@@ -3,19 +3,6 @@
   padding: 0;
 }
 
-body::-webkit-scrollbar {
-  width: 5px;
-}
-
-body::-webkit-scrollbar-track {
-  width: 5px;
-  background: gray;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #252525;
-}
-
 #banner-container {
   width: 100%;
   height: 100vh;

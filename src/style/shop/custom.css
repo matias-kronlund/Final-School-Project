@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  height: 300vh;
+  background: #2f244b;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  width: 5px;
+  background: gray;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #252525;
+}
+/*# sourceMappingURL=custom.css.map */

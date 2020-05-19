@@ -1,0 +1,56 @@
+nav{
+    z-index: 10;
+    top: 0;
+    position: fixed;
+    margin: auto;
+    width: 100%;
+    height: 70px;
+    background: white;
+    border-bottom: 1px solid darkgray;
+    ul{
+        width: 90%;
+        display: block;
+        margin: auto;
+        li{
+            display: inline-block;
+        }
+        .cart{
+            float: right;
+            img{
+                margin-top: 10px;
+                height: 50px;
+            }
+        }
+        .logo svg{
+            margin-top: 1px;
+            height: 68px;
+        }
+    } 
+}
+.banner{
+    top: 0px;
+    width: 90%;
+    left: 50%;
+    margin-left: -45%;
+    height: calc(50vh - 70px);
+    margin-top: 71px;
+    background: red;
+    background-image: url("../../images/headebg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    border-bottom: 2px solid rgb(99, 99, 99);
+    h1{
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        height: 50px;
+        font-size: 40px;
+        line-height: 50px;
+        margin-top: -20px;
+        width: 88px;
+        left: 50%;
+        margin-left: -44px;
+    }
+}

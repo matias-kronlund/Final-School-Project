@@ -1,6 +1,17 @@
 $sidebars: rgba(0, 0, 0, 0);
 $my_blue: #2f244b;
 $boxdelay1: 1s;
+body::-webkit-scrollbar {
+    width: 5px;
+
+}
+body::-webkit-scrollbar-track{
+    width: 5px;
+    background: gray;
+}
+body::-webkit-scrollbar-thumb{
+    background: rgb(37, 37, 37);
+}
 #content-container{
     display: grid;
     grid-template-columns: 1fr;

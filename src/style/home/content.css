@@ -1,3 +1,16 @@
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  width: 5px;
+  background: gray;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #252525;
+}
+
 #content-container {
   display: -ms-grid;
   display: grid;
