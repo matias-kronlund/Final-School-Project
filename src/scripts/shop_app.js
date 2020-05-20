@@ -1,35 +1,131 @@
 let app = angular.module("shopApp", []);
+let shop = [];
 app.filter('myFormat', function() {
-    return function(items, scope){
-        console.log(items)
-        let retitems = [];
-        for(let item of items){
-            let item_langs = item.lang;
-            if(item_langs.includes("java")){
-                retitems.push(item);
+    return function(tags){
+        if(tags.length == 0){
+            return shop;
+        }
+        let difs = [],
+            langs = [],
+            display = [];
+        for(let tag of tags){
+            if(tag.split("_")[0] == "lang"){
+                langs.push(tag.split("_")[1])
+            }else{
+                difs.push(tag.split("_")[1])
             }
         }
-        return retitems;
+        if(langs.length > 0){
+            for(let item of shop){
+                for(let i_lang of item.lang){
+                    if(langs.includes(i_lang)){
+                        display.push(item);
+                        break;
+                    }
+                }
+            }
+            if(difs.length > 0){
+                let display2 = []
+                for(let item of display){
+                    for(let i_dif of item.dif){
+                        if(difs.includes(i_dif)){
+                            display2.push(item);
+                            break;
+                        }
+                    }
+                }
+                return display2
+            }else{
+                return display
+            }
+        }else{
+            for(let item of shop){
+                for(let i_dif of item.dif){
+                    if(difs.includes(i_dif)){
+                        display.push(item);
+                        break;
+                    }
+                }
+            }
+            return display
+        }
     }
 });
 app.controller('shopCtrl', function ($scope) {
     $scope.products = [{
-            name: "Java Advanced",
+            name: "Java",
             lang: ["java"],
-            dif: "advanced",
+            dif: "a",
             price: 100.99,
             img: "01"
         },
         {
-            name: "Html Css",
-            lang: ["html", "css"],
-            dif: "advanced",
+            name: "Python",
+            lang: ["python"],
+            dif: "i",
+            price: 100.99,
+            img: "02"
+        },
+        {
+            name: "Html",
+            lang: ["html"],
+            dif: "b",
             price: 100.99,
             img: "03"
         },
+        {
+            name: "Nodejs",
+            lang: ["javascript"],
+            dif: "a",
+            price: 100.99,
+            img: "04"
+        },
+        {
+            name: "PyGames",
+            lang: ["python"],
+            dif: "i",
+            price: 100.99,
+            img: "05"
+        },
+        {
+            name: "Angularjs",
+            lang: ["javascript"],
+            dif: "b",
+            price: 100.99,
+            img: "06"
+        },
+        {
+            name: "Electron",
+            lang: ["javascript"],
+            dif: "a",
+            price: 100.99,
+            img: "07"
+        },
+        {
+            name: "Angular",
+            lang: ["html", "css", "javascript"],
+            dif: "i",
+            price: 100.99,
+            img: "08"
+        },
+        {
+            name: "Css",
+            lang: ["css"],
+            dif: "b",
+            price: 100.99,
+            img: "09"
+        },
+        {
+            name: "React",
+            lang: ["html", "css", "javascript"],
+            dif: "a",
+            price: 100.99,
+            img: "10"
+        },
     ]
-    $scope.langs = [];
-    $scope.difs = [];
+    shop =  $scope.products;
+    $scope.data = [];
+    
     $scope.apply = function () {
         let states = []
         let uls = document.getElementsByClassName("options");
@@ -41,16 +137,7 @@ app.controller('shopCtrl', function ($scope) {
                 }
             }
         }
-        let langs = [],
-            difs = [];
-        for(let state of states){
-            if(state.split("_")[0] == "lang"){
-                langs.push(state.split("_")[1]);
-            }else{
-                difs.push(state.split("_")[1]);
-            }
-        }
-        $scope.langs = langs;
-        $scope.difs = difs;
+        
+        $scope.data = states;
     }
 });

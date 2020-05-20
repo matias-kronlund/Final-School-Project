@@ -5,8 +5,7 @@
 }
 
 body {
-  height: 300vh;
-  background: #2f244b;
+  background: #202020;
 }
 
 body::-webkit-scrollbar {

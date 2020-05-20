@@ -1,11 +1,10 @@
-$my_blue: #2f244b;
+$my_blue: #202020;
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
 }
 body{
-    height: 300vh;
     background: $my_blue;
 }
 body::-webkit-scrollbar {
