@@ -1,1 +1,9 @@
-/* No CSS *//*# sourceMappingURL=custom.css.map */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #202020;
+}
+/*# sourceMappingURL=custom.css.map */

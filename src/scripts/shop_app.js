@@ -125,7 +125,9 @@ app.controller('shopCtrl', function ($scope) {
     ]
     shop =  $scope.products;
     $scope.data = [];
-    
+    $scope.testing = (no)=>{
+        document.location.href = "product.html?p="+no;
+    }
     $scope.apply = function () {
         let states = []
         let uls = document.getElementsByClassName("options");

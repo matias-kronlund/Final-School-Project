@@ -51,7 +51,7 @@
             <button ng-click="apply()">Apply</button>
         </div>
         <div class="list">
-            <div ng-repeat="item in data | myFormat:item"><div>
+            <div ng-repeat="item in data | myFormat:item"><div ng-click="testing(item.img)">
                 <img ng-src="../src/images/products/curses-{{item.img}}.jpg" alt="">
                 <p class="product_Name">{{item.name}}</p>
                 <p class="product_Price">{{item.price}}€</p>

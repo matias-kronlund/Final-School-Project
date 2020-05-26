@@ -40,8 +40,7 @@ nav ul .logo svg {
   margin-left: -45%;
   height: calc(50vh - 70px);
   margin-top: 71px;
-  background: red;
-  background-image: url("https://atlassianblog.wpengine.com/wp-content/uploads/2017/12/17-ways-to-get-kids-coding0d@3x.png");
+  background-image: url("../../images/cool-background (1).png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -61,6 +60,5 @@ nav ul .logo svg {
   left: 50%;
   margin-left: -44px;
   color: white;
-  background-color: red;
 }
 /*# sourceMappingURL=header.css.map */
