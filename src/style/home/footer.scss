@@ -29,8 +29,9 @@ footer{
                     text-align: left;
                     text-decoration: none;
                     color: white;
-                    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-                    font-size: 20px;
+                    font-family: source-code-pro;
+                    font-weight: 500;
+                    font-size: 16px;
                     position: relative;
                     span{
                         transition: 300ms;
@@ -91,6 +92,8 @@ footer{
                 bottom: 0;
                 left: 50%;
                 margin-left: -150px;
+                color: white;
+                font-family: arial;
             }
         }
     }

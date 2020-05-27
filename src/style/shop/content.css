@@ -17,6 +17,7 @@
   padding: 2px;
   width: 250px;
   border-right: 1px solid darkgray;
+  font-family: arial;
 }
 
 .content .s > ul > li {
@@ -75,6 +76,7 @@
 }
 
 .content .list {
+  font-family: arial;
   padding: 2px;
   width: 100%;
   display: -ms-grid;

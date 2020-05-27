@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
-    <link rel="stylesheet" href="../src/style/shop/header.css">
-    <link rel="stylesheet" href="../src/style/shop/cart/content.css">
-    <link rel="stylesheet" href="../src/style/shop/cart/custom.css">
-    <link rel="stylesheet" href="https://use.typekit.net/voh7pxv.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <title>Contact</title>
+    <link rel="stylesheet" href="src/style/contact/content.css">
+    <link rel="stylesheet" href="src/style/contact/custom.css">
+    <link rel="stylesheet" href="src/style/shop/header.css">
 </head>
 
 <body>
@@ -85,31 +83,24 @@
     </header>
     <div class="content">
         <div class="item-container">
-            <div class="top">
-                <img src="https://image.flaticon.com/icons/png/512/263/263142.png" class="shop-icon">
-                <p class="shopping-cart">Shopping Cart</p>
+            <div class="form">
+                <h1>Contact Me</h1>
+                <form action="">
+                    <input type="text" placeholder="Name" id="name"><input type="email" placeholder="Email" id="email">
+                    <input type="text" placeholder="Subject" id="subject">
+                    <textarea name="message" id="message" placeholder="Message"></textarea>
+                    <button id="send">Send</button>
+                </form>
             </div>
-            <div class="products" ng-app="cartApp" ng-controller="cartCtrl">
-                <ul class="cart-list">
-                    <li ng-repeat="item in cart" class="cart-item">
-                        <img ng-src="../src/images/products/curses-{{item.img}}.jpg" class="prod-img">
-                        <div class="prod-data">
-                            <p class="prod-title">{{item | myFormat:item}}</p>
-                            <ul class="prod-desc">
-                                <li ng-repeat="des in item.desc"><span>{{des}}</span></li>
-                            </ul>
-                        </div>
-                        <div class="pricing">
-                            <div class="amount-selector"><p class="price-piece">{{item.price}} € / Piece</p><button ng-click="downAmount(item)">-</button>{{item.amount}}<button ng-click="upAmount(item)">+</button></div>
-                            <p class="total-price">{{item.amount * item.price | number:2}} €</p>
-                        </div>
-                    </li>
-                </ul>
-                <p class="price-total">Total Price: <span>{{totalPrice | number:2}} €</span></p><button class="order">Order</button>
+            <div class="con-info">
+                <p>Phone: 111222333444</p>
+                <p>Addres: 123Street, New York, USA</p>
+                <p>Email: info@mk.com</p>
+                <p></p>
             </div>
         </div>
+        
     </div>
-    <script src="../src/scripts/products.js"></script>
-    <script src="../src/scripts/cart-app.js"></script>
 </body>
+
 </html>

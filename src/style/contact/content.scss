@@ -1,0 +1,50 @@
+.content{
+    width: 90%;
+    height: calc(100vh - 71px);
+    background: white;
+    margin: auto;
+    margin-top: 71px;
+    position: relative;
+    display: block;
+    min-height: 100vh;
+    .item-container{
+        padding: 20px;
+        border-radius: 5px;
+        border: 2px solid rgb(219, 219, 219);
+        background: rgb(233, 233, 233);
+        width: 50%;
+        margin-top: 60px;
+        position: absolute;
+        left: 50%;
+        margin-left: -25%;
+        display: grid;
+        .form{
+            text-align: center;
+            *{
+                font-family: arial;
+                margin: 5px;
+                padding: 5px;
+            }
+            #name,#email{
+                width: 200px;
+            }
+            #subject{
+                width: 424px;
+                
+            }
+            #message{
+                display: block;
+                width: 425px;
+                margin: auto;
+            }
+            #send{
+                width: 437px;
+            }
+        }
+        .con-info{
+            width: 440px;
+            margin: auto;
+            font-family: arial;
+        }
+    }
+}

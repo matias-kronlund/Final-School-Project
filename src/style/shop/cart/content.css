@@ -38,6 +38,7 @@
   position: absolute;
   left: 60px;
   font-size: 40px;
+  font-family: source-code-pro;
 }
 
 .content .item-container .cart-list {
@@ -60,8 +61,8 @@
 }
 
 .content .item-container .cart-list .cart-item .prod-data .prod-title {
-  font-size: 23px;
-  font-family: arial;
+  font-size: 20px;
+  font-family: source-code-pro;
   font-weight: 400;
 }
 
@@ -70,10 +71,11 @@
   margin-left: 20px;
   list-style-type: square;
   color: red;
+  font-family: airal;
 }
 
 .content .item-container .cart-list .cart-item .prod-data .prod-desc span {
-  font-size: 16px;
+  font-size: 14px;
   color: black;
   line-height: 23px;
 }
@@ -84,8 +86,9 @@
 
 .content .item-container .cart-list .cart-item .pricing .price-piece {
   display: inline;
-  margin-right: 20px;
+  margin-right: 10px;
   line-height: 30px;
+  font-family: arial;
 }
 
 .content .item-container .cart-list .cart-item .pricing button {
@@ -111,11 +114,13 @@
   margin-right: 10px;
   color: red;
   font-weight: 400;
+  font-family: arial;
 }
 
 .content .item-container .price-total {
   text-align: right;
   font-size: 30px;
+  font-family: arial;
 }
 
 .content .item-container .price-total span {

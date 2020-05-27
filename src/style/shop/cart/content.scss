@@ -31,6 +31,7 @@
                 position: absolute;
                 left: 60px;
                 font-size: 40px;
+                font-family: source-code-pro;
             }
         }
         .cart-list{
@@ -47,8 +48,8 @@
                 }
                 .prod-data{
                     .prod-title{
-                        font-size: 23px;
-                        font-family: arial;
+                        font-size: 20px;
+                        font-family: source-code-pro;
                         font-weight: 400;
                     }
                     .prod-desc{
@@ -56,8 +57,9 @@
                         margin-left: 20px;
                         list-style-type: square;
                         color:red;
+                        font-family: airal;
                         span{
-                            font-size: 16px;
+                            font-size: 14px;
                             color: black;
                             line-height: 23px;
                         }
@@ -69,8 +71,9 @@
                     }
                     .price-piece{
                         display: inline;
-                        margin-right: 20px;
+                        margin-right: 10px;
                         line-height: 30px;
+                        font-family: arial;
                     }
                     button{
                         cursor: pointer;
@@ -93,6 +96,7 @@
                         margin-right: 10px;
                         color: red;
                         font-weight: 400;
+                        font-family: arial;
                     }
                 }
             }
@@ -100,6 +104,7 @@
         .price-total{
             text-align: right;
             font-size: 30px;
+            font-family: arial;
             span{
                 color: red;
                 font-weight: 400;
