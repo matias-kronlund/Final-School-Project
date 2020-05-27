@@ -1,20 +1,31 @@
 let cookie = document.cookie;
 let cart = [];
-if(cookie == ""){
+if (cookie == "") {
     console.log("empty")
-}else{
+} else {
     console.log(cookie)
-}
-function emptyCart(){
-    document.cookie = "cart=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
-}
-function addToCart(prod){
-    cart.push("asd");
-    document.cookie = "cart="+ cart;
-    console.log(document.cookie)
-}
-function getCartAmount(){
     let currentcookie = document.cookie;
-    
+    let cart_cookie = currentcookie.split("cart=")[1].split(";")[0];
+    cart = cart_cookie.split(",");
 }
-emptyCart()
+
+function addToCart(prod) {
+    cart.push(prod);
+    var d = new Date();
+    d.setTime(d.getTime() + (1 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = "cart=" + cart + ";" + expires + ";";
+    console.log(document.cookie)
+    getCartAmount();
+}
+function getCartAmount() {
+    let currentcookie = document.cookie;
+    if(currentcookie != ""){
+        let cart_cookie = currentcookie.split("cart=")[1].split(";")[0];
+        document.getElementById("cart-amount").innerHTML = cart_cookie.split(",").length;
+        document.getElementById("cart-amount").classList.remove("cart-empty");
+    }else{
+        document.getElementById("cart-amount").classList.toggle("cart-empty");
+    }
+}
+getCartAmount()

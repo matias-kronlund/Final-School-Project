@@ -20,7 +20,24 @@ nav ul li {
 }
 
 nav ul .cart {
+  position: relative;
   float: right;
+}
+
+nav ul .cart #cart-amount {
+  height: 22px;
+  width: 22px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  right: -10px;
+  color: white;
+  line-height: 22px;
+  text-align: center;
+}
+
+nav ul .cart .cart-empty {
+  display: none;
 }
 
 nav ul .cart img {

@@ -15,6 +15,21 @@ nav{
             display: inline-block;
         }
         .cart{
+            #cart-amount{
+                height: 22px;
+                width: 22px;
+                background: red;
+                border-radius: 50%;
+                position: absolute;
+                right: -10px;
+                color: white;
+                line-height: 22px;
+                text-align: center;
+            }
+            .cart-empty{
+                display: none;
+            }
+            position: relative;
             float: right;
             img{
                 margin-top: 10px;

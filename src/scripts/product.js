@@ -22,4 +22,17 @@ function getDif(prod){
 }
 let product = getProduct(product_no, products);
 document.getElementById("prod-img").src = "../src/images/products/curses-"+product_no+".jpg";
-document.getElementById("title").innerHTML = `${getDif(product)} ${product.name} Course` 
+document.getElementById("title").innerHTML = `${getDif(product)} ${product.name} Course`
+document.getElementById("price").innerHTML = product.price + "€"; 
+document.getElementById("addtoCart").addEventListener("click", function(){
+    addToCart(product.img);
+})
+let dots = document.getElementById("dots")
+for(let descItem of product.desc){
+    let span = document.createElement("span");
+    span.innerHTML = descItem;
+    let li = document.createElement("li");
+    li.appendChild(span);
+    dots.appendChild(li);
+     
+}
