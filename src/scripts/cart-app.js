@@ -2,7 +2,7 @@ let cookie = document.cookie;
 let empty;
 let cart = [];
 let cartitems = [];
-if(cookie == ""){
+if(cookie == "" || !cookie.includes("cart")){
     empty = true;
 }else{
     empty = false;

@@ -1,6 +1,6 @@
 let cookie = document.cookie;
 let cart = [];
-if (cookie == "") {
+if (cookie == "" || !cookie.includes("cart")) {
     console.log("empty")
 } else {
     console.log(cookie)
